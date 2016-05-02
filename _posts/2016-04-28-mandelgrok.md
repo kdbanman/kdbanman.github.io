@@ -27,7 +27,7 @@ Mandelgrok started as an evening project to render those sequences - I had no id
 But after seeing those beautiful things, I needed to see more.
 After the odd spare weekend, I have a tool that looks like this:
 
-[![Mandelgrok screencap](/mandelgrok_screen.png)](/mandelgrok)
+[![Mandelgrok screencap]({{ site.url }}/assets/mandelgrok_screen.png)](/mandelgrok)
 
 Check it out right [here](http://kdbanman.com/mandelgrok)!
 

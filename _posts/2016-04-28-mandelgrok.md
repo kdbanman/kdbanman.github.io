@@ -29,7 +29,7 @@ After the odd spare weekend, I have a tool that looks like this:
 
 [![Mandelgrok screencap]({{ site.url }}/assets/mandelgrok_screen.png)](/mandelgrok)
 
-Check it out right [here](http://kdbanman.com/mandelgrok)!
+Check it out right [here](http://kdbanman.com/mandelgrok) or click the screencap above!
 
 ### Built with Vanilla JS
 

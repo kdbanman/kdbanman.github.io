@@ -11,7 +11,7 @@ But mandelgrok's purpose is to show you the sequences that actually determine ea
 *z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c* (where *z* and *c* are complex numbers)
 
 You form a sequence by choosing a value for *c*, setting *z<sub>0</sub>* to zero, and computing the subsequent values of *z*.
-Some of those sequences plotted below.  Each plot is for some value of *c* (I don't remember which),
+Some of those sequences plotted below.  Each plot is for a different value of *c*,
 and the y-axis is the distance from *c* to *z<sub>x</sub>*.
 
 ![Sequence 1](https://raw.githubusercontent.com/kdbanman/mandelgrok/gh-pages/sequence_pics/waves3.png)

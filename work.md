@@ -4,7 +4,7 @@ title: Work
 order: 2
 ---
 
-If you're interested in my help solving your software problems, please [get in touch]({{ site.url }}/contact) for a copy of my CV.  In the mean time, check out my [GitHub portfolio][1] and my [StackOverflow page](http://stackexchange.com/users/4101827).
+If you're interested in my help solving your software problems, or you're interested in contributing to my projects, please [get in touch]({{ site.url }}/contact).  In the mean time, check out my [GitHub portfolio][1] and my [StackOverflow page](http://stackexchange.com/users/4101827).
 
 My presence on GitHub has been building up steadily for several years.  It shows successes and failures, and it shows everything from experiments like [mandelgrok][2] and small projects like [reportify][4], to large team projects like [polyball][5] or [TravelTracker][6].
 

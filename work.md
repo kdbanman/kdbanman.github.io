@@ -4,7 +4,7 @@ title: Work
 order: 2
 ---
 
-If you're interested in my help solving your software problems, or you're interested in contributing to my projects, please [get in touch]({{ site.url }}/contact).  In the mean time, check out my [GitHub portfolio][1] and my [StackOverflow page](http://stackexchange.com/users/4101827).
+If you're interested in my help solving your software problems, or you're interested in contributing to my projects, please [get in touch]({{ site.url }}/contact).  You might get a sense of what I'm into by checking out my [GitHub portfolio][1] and my [StackOverflow page](http://stackexchange.com/users/4101827).
 
 My presence on GitHub varies wildly in frequency.  But if you visit, you'll see experiments like [mandelgrok][2], small projects like [reportify][4], large team projects like [polyball][5] or [TravelTracker][6], and the odd contribution to other projects like [Accord.NET][7] or [Glances][8].
 

@@ -3,6 +3,8 @@ layout: post
 title: Eye of Collatz
 ---
 
+NOTE:  This article is a work in progress.  Formatting  and images are totally not considered right now.
+
 The [Eye of Collatz](https://www.youtube.com/watch?v=sGi9pE2xP40) is a simple video visualizing the [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture).
 More correctly, it visualizes the [hailstone sequences](http://mathworld.wolfram.com/HailstoneNumber.html) that the conjecture is about.
 There are a ton of visualizations of them, and just like all the others, this one is a little different.

@@ -31,7 +31,7 @@ After the odd spare weekend, I have a tool that looks like this:
 
 Check it out right [here](http://kdbanman.com/mandelgrok) or click the screencap above!
 
-### Built with Vanilla JS
+#### Built with Vanilla JS
 
 mandelgrok is all vanilla JavaScript.*  It's just a couple of .js files and one .html file.  I use three canvases and some CSS to make it look the way it does.  Check out the code on [mandelgrok's GitHub page](http://github.com/kdbanman/mandelgrok).
 

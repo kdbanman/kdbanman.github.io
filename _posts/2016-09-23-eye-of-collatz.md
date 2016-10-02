@@ -3,11 +3,13 @@ layout: post
 title: eye of collatz
 ---
 
-The [Eye of Collatz](https://www.youtube.com/watch?v=sGi9pE2xP40) is a simple video visualizing the [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture).  Technically, each pixel in the video matters to the visualization, so I recommend high quality settings on full screen:
+The [Eye of Collatz](https://www.youtube.com/watch?v=sGi9pE2xP40) is a simple video visualizing the [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture).
+The first thirty seconds are probably boring and uninformative, so feel free to click on the annotation that takes you to the exciting part.
+Technically, each pixel in the video matters to the visualization, so I recommend high quality settings on full screen:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sGi9pE2xP40" frameborder="0" allowfullscreen></iframe>
 
-There.  Now you've seen somewhere between zero and 180 000 of the [hailstone sequences](http://mathworld.wolfram.com/HailstoneNumber.html) that Collatz conjectured about.
+There.  Depending on how long you watched, you've now seen somewhere between zero and 180 000 of the [hailstone sequences](http://mathworld.wolfram.com/HailstoneNumber.html) that Collatz conjectured about.
 Hopefully it was pretty to watch, because at this point you probably don't understand what that red swirly square has to do with Collatz.
 
 If I were a better animator then the video might've explained itself, but instead I'll do that here.
@@ -17,7 +19,7 @@ Before that, though, try zooming waaay in on this raw frame image, especially wh
 <script src="/public/js/jquery.panzoom.min.js"></script>
 
 <div class="panzoom-container">
-  <img class="panzoom" src="https://github.com/kdbanman/collzakk/raw/master/coll.png" />
+  <img class="panzoom" src="/public/img/coll.png" />
 </div>
 <script>
 (function() {
@@ -121,6 +123,22 @@ When a number is plotted on the grid, a smaller starting number means a darker c
 For example, the pixels for the numbers *3*, *10*, *8*, *4* have a dark color because they are first plotted from the starting number *3*.
 However, the numbers *7*, *22*, *11*, and *34* have a brighter color because they are first plotted from the starting number *7*.
 
+#### Whew.
+
+After all that, here's another picture.
+
+<img class="panzoom" src="/public/img/coll_zoom.png" />
+
+Notice the bright and dark diagonals?
+And all the little  light and dark pockets?
+How about all the different shapes like crosses and tetris pieces, or how there are vertical lines on the top, but the horizontal lines on the left?
+And on a larger scale, notice that there is a lot of pattern and self-similarity in all sorts of ways all across the image, but no two parts seem to be perfectly identical.
+All very interesting, considering this is emergent from two simple formulae and a single if-else condition.
+
+My favorite pattern is the dark "valleys" along the main diagonals of the square.
+I have no explanation for it, so further experimentation is necessary.
+Stay tuned.
+
 #### Built with Processing
 
-The Eye of Collatz' frames were lovingly rendered with Processing.  It's pretty awful code, if I recall.  (This post is years after the video was made.)  The frames were compiled with some arcane set of options passed to ffmpeg.  Check out the code on [the GitHub page](http://github.com/kdbanman/collzakk).
+The Eye of Collatz' frames were lovingly rendered with Processing.  It's pretty awful code, if I recall.  (This post came years after the video was made.)  After Processing did its thing, the frames were compiled into a video with some arcane set of options passed to ffmpeg.  Check out the code on [the GitHub page](http://github.com/kdbanman/collzakk) if you dare.

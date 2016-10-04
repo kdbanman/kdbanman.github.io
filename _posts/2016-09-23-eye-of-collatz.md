@@ -4,7 +4,7 @@ title: eye of collatz
 ---
 
 The [Eye of Collatz](https://www.youtube.com/watch?v=sGi9pE2xP40) is a simple video visualizing the [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture).
-The first thirty seconds are probably boring and uninformative, so feel free to click on the annotation that takes you to the exciting part.
+The first thirty seconds might seem a little slow and it might not be clear what's going on, so feel free to click on the annotation that takes you to the exciting part.
 Technically, each pixel in the video matters to the visualization, so I recommend high quality settings on full screen:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sGi9pE2xP40" frameborder="0" allowfullscreen></iframe>

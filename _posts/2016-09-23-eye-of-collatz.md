@@ -26,7 +26,7 @@ Before that, though, try zooming waaay in on this raw frame image, especially wh
   var $panzoom = $('.panzoom').panzoom();
   $panzoom.parent().on('mousewheel.focal', function( e ) {
     e.preventDefault();
-    var delta = e.delta || e.originalEvent.wheelDelta;
+    var delta = e.delta || e.originalEvent.deltaY;
     var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
     $panzoom.panzoom('zoom', zoomOut, {
       increment: 0.3,

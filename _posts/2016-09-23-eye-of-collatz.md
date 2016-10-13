@@ -37,8 +37,8 @@ var onMouseWheel = function( e ) {
 }
 (function() {
   var $panzoom = $('.panzoom').panzoom();
-  $panzoom.parent().on('mousewheel.focal', onMouseWheel);
-  $panzoom.parent().on('DOMMouseScroll', onMouseWheel);
+  $panzoom.parent().on('mousewheel.focal', function (e) { onMouseWheel.call(this, e); });
+  $panzoom.parent().on('DOMMouseScroll', function (e) { onMouseWheel.call(this, e); });
 })();
 </script>
 

@@ -23,6 +23,7 @@ Before that, though, try zooming waaay in on this raw frame image, especially wh
 </div>
 <script>
 var onMouseWheel = function( e ) {
+  console.log("mouse wheel " + e);
   e.preventDefault();
   var delta = e.delta || e.originalEvent.wheelDelta;
   var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;

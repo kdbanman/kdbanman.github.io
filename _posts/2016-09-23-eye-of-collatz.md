@@ -22,21 +22,23 @@ Before that, though, try zooming waaay in on this raw frame image, especially wh
   <img class="panzoom" src="/public/img/coll.png" />
 </div>
 <script>
+var onMouseWheel = function( e ) {
+  e.preventDefault();
+  var delta = e.delta || e.originalEvent.wheelDelta;
+  var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
+  $panzoom.panzoom('zoom', zoomOut, {
+    increment: 0.3,
+    animate: true,
+    minScale: 1.1,
+    maxScale: 30,
+    contain: 'invert',
+    focal: e
+  });
+}
 (function() {
   var $panzoom = $('.panzoom').panzoom();
-  $panzoom.parent().on('mousewheel.focal', function( e ) {
-    e.preventDefault();
-    var delta = e.delta || e.originalEvent.deltaY;
-    var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
-    $panzoom.panzoom('zoom', zoomOut, {
-      increment: 0.3,
-      animate: true,
-      minScale: 1.1,
-      maxScale: 30,
-      contain: 'invert',
-      focal: e
-    });
-  });
+  $panzoom.parent().on('mousewheel.focal', onMouseWheel);
+  $panzoom.parent().on('DOMMouseScroll', onMouseWheel);
 })();
 </script>
 

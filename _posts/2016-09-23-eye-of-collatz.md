@@ -15,6 +15,10 @@ Hopefully it was pretty to watch, because at this point you probably don't under
 If I were a better animator then the video might've explained itself, but instead I'll do that here.
 Before that, though, try zooming waaay in on this raw frame image, especially where the square is only partially filled in:
 
+<div class="message" style="font-size: 0.7rem; font-style: italic;">
+Note:  I've tried pretty hard to make the following zooming and panning image work across browsers and devices, but it might be a bit jittery or backwards on some combinations, like on Safari with a pinch-zoom trackpad, for example.  Sorry if you're affected :)
+</div>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="/public/js/jquery.panzoom.min.js"></script>
 
@@ -22,24 +26,64 @@ Before that, though, try zooming waaay in on this raw frame image, especially wh
   <img class="panzoom" src="/public/img/coll.png" />
 </div>
 <script>
-var onMouseWheel = function( e ) {
-  console.log("mouse wheel " + e);
-  e.preventDefault();
-  var delta = e.delta || e.originalEvent.wheelDelta;
-  var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
-  $panzoom.panzoom('zoom', zoomOut, {
-    increment: 0.3,
-    animate: true,
-    minScale: 1.1,
-    maxScale: 30,
-    contain: 'invert',
-    focal: e
+  (function() {
+    var $panzoom = $('.panzoom').panzoom();
+
+    var throttle = function (fn, threshhold, scope) {
+      threshhold || (threshhold = 250);
+      var last,
+          deferTimer;
+      return function () {
+        var context = scope || this;
+
+        var now = +new Date,
+            args = arguments;
+        if (last && now < last + threshhold) {
+          // hold on to it
+          clearTimeout(deferTimer);
+          deferTimer = setTimeout(function () {
+            last = now;
+            fn.apply(context, args);
+          }, threshhold);
+        } else {
+          last = now;
+          fn.apply(context, args);
+        }
+      };
+    }
+
+  var zoom = throttle(function (zoomOut, e) {
+    $panzoom.panzoom('zoom', zoomOut, {
+      increment: 0.3,
+      animate: true,
+      minScale: 1.1,
+      maxScale: 30,
+      contain: 'invert',
+      focal: e
+    });
+  }, 100);
+
+  $panzoom.parent().on('mousewheel.focal', function (e) {
+    var delta = e.delta || e.originalEvent.wheelDelta;
+    if (delta === undefined) { return; }
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    var zoomOut = delta < 0;
+    zoom(zoomOut, e);
   });
-}
-(function() {
-  var $panzoom = $('.panzoom').panzoom();
-  $panzoom.parent().on('mousewheel.focal', function (e) { onMouseWheel.call(this, e); });
-  $panzoom.parent().on('DOMMouseScroll', function (e) { onMouseWheel.call(this, e); });
+  $panzoom.parent().on('DOMMouseScroll', function (e) {
+    var delta = e.delta;
+    var delta = delta || -1 * e.originalEvent.detail;
+    if (delta === undefined) { return; }
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    var zoomOut = delta < 0;
+    zoom(zoomOut, e);
+  });
 })();
 </script>
 

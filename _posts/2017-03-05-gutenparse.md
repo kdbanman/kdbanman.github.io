@@ -110,7 +110,7 @@ SV (130)
 Removed 6577 books.
 ```
 
-To see the omitted output of that command, see [this log file](english_only_log.txt).
+To see the omitted output of that command, see [this log file]({{ site.url }}/public/raw/english_only_log.txt).
 You might notice ~6000 lines down that the script found a book with more than one title.
 That's surprising, but whatever.
 Data is just weird sometimes.
@@ -166,7 +166,7 @@ title (1)
 Removed 9992 books.
 ```
 
-Again, check out the omitted output in [the log file](labelled_english_only_log.txt).
+Again, check out the omitted output in [the log file]({{ site.url }}/public/raw/labelled_english_only_log.txt).
 Looks like our friend with more than one title made it passed the language pruning - he shows up around 28K lines down the log.
 
 We lost 9992 books this time.
@@ -211,7 +211,7 @@ Removing /home/ec2-user/data/big_drive/prunes/labelled_english_only/10056 for au
 Removed 667 books.
 ```
 
-Peek at [the log file](single_author_labelled_english_only_log.txt) if you wish.
+Peek at [the log file]({{ site.url }}/public/raw/single_author_labelled_english_only_log.txt) if you wish.
 You might notice an error message - "No handlers could be found for logger "rdflib.term".
 I'm not _exactly_ sure where that's coming from, but we'll dig in later if it becomes a problem.
 Also, notice that the book with multiple titles is gone now!
@@ -292,8 +292,8 @@ fr (9)
 ...
 ```
 
-See the omitted output with each book and some aggregate statistics in [its output log](pruned_stats_log.txt).
-There is also [a CSV file](pruned_stats.csv) with all the books and labels that we can do some easy analysis with nice tools.
+See the omitted output with each book and some aggregate statistics in [its output log]({{ site.url }}/public/raw/pruned_stats_log.txt).
+There is also [a CSV file]({{ site.url }}/public/raw/pruned_stats.csv) with all the books and labels that we can do some easy analysis with nice tools.
 
 First, let's see how many books we have across all of the author birth years.
 
@@ -337,7 +337,7 @@ TODO
 
 Notice I've switched to using the CSV file to cycle through the books.
 It's _much_ faster than reading, parsing, and querying an RDF graph file for each book.
-As usual, I've posted [the removal log](post_1500_pruned_log.txt) for the curious.
+As usual, I've posted [the removal log]({{ site.url }}/public/raw/post_1500_pruned_log.txt) for the curious.
 
 For the histogram, we'll use a linear scale for the histogram again so that our intuitive sense of area is useful here.
 

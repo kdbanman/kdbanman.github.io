@@ -15,5 +15,5 @@ author:
   name:           'Kirby Banman'
   url:            https://github.com/kdbanman
 
-paginate:         5
+paginate:         1
 paginate_path:    /projects/page:num

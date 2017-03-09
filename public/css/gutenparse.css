@@ -1,0 +1,23 @@
+g .bar rect {
+  fill: steelblue;
+}
+
+g .bar text {
+  fill: #000;
+  font: 10px sans-serif;
+  transform: rotate(-90deg);
+}
+
+g text.label {
+  fill: #000;
+  font: 14px sans-serif;
+}
+
+g text.title {
+  fill: #000;
+  font: 24px sans-serif;
+}
+
+g.axis--x text {
+  transform: rotate(-45deg) translate(-17px, -3px);
+}

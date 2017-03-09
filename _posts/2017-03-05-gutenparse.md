@@ -297,7 +297,10 @@ There is also [a CSV file]({{ site.url }}/public/raw/pruned_stats.csv) with all 
 
 First, let's see how many books we have across all of the author birth years.
 
-- histogram of birth year https://jsfiddle.net/hsy431cr/9/
+<svg width="700" height="400" class="birth_year_histogram"></svg>
+<link rel="stylesheet" type="text/css" href="/public/css/gutenparse.css">
+<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript" src="/public/js/birth_year_histogram.js"></script>
 
 Seems we have quite the concentration of authors born in the 1800s!
 (Anyone want to guess when the Gutenberg printing press emerged?)

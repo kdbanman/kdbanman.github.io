@@ -1,4 +1,4 @@
-var plotHistogram = function (data) {
+var plotBirthYearHistogram = function (data) {
 	var formatCount = d3.format(",.0f");
 
   var svg = d3.select("svg.birth_year_histogram"),
@@ -97,5 +97,5 @@ d3.csv("/public/raw/pruned_stats.csv", function (err, data) {
   	return !isNaN(year)
   });
 
-  plotHistogram(years);
+  plotBirthYearHistogram(years);
 });

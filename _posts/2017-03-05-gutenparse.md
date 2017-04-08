@@ -306,16 +306,18 @@ Seems we have quite the concentration of authors born in the 1800s!
 (Anyone want to guess when the Gutenberg printing press emerged?)
 Let's toss that histogram on a log scale so we can see the lower frequency data, and lets break it down into many more buckets.
 
-- log freq histogram of birth year https://jsfiddle.net/hsy431cr/10/
+<svg width="700" height="400" class="birth_year_log_histogram"></svg>
+<script type="text/javascript" src="/public/js/birth_year_log_histogram.js"></script>
 
 The buckets with a count of zero or one don't show up at all on the log scale graph, but it's still a helpful view.
 I'm quite surprised that we have dozens of books over 2000 years old.
 Neat!
 
 Of course, counting the books isn't the only way to measure, because the books have different sizes.
-Here's a plot of the total amount of text across all books in the same histogram buckets.
+Here's a plot of the total amount of text across all books in the same histogram buckets.  We'll also only look at years beyond 1500, because it's very obvious that a balanced representation of years prior will not be possible with what's available.
 
-- log freq histogram of total book size total TODO fiddle
+<svg width="700" height="400" class="bytes_by_birth_year"></svg>
+<script type="text/javascript" src="/public/js/bytes_by_birth_year.js"></script>
 
 - bar chart count of alphabetical LCC
 - bar chart count of only first LCC letter
